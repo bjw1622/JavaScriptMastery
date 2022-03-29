@@ -4,6 +4,9 @@
 // 원시 타입은 Data, Stack에 할당 (전역 => data, 로컬 => stack)
 // 객체는 Heap에 할당 (사이즈가 정해지지 않고 동적으로 사이즈가 변하는 것들)
 // object 부분은 heap에 할당되고 heap의 메모리 주소가 보관된 주소를 data나 stack에 저장 
+
+// 원시 타입은 값 자체가 메모리에 들어있음.
+// 객체는 참조값(heap의 메모리 주소)가 들어있음
 let name = 'apple';
 let color = 'red';
 let display = '🍎';
