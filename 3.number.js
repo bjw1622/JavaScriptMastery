@@ -14,4 +14,3 @@ let hex = 0x7b;
 console.log(binary, octal, hex);
 
 console.log(123/'text'); // NaN
-
