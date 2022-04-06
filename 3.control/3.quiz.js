@@ -3,10 +3,9 @@ let num = 2;
 // num의 숫자가 짝수이면 👍, 홀수라면 👎을 출력하도록
 // if
 if (num % 2 === 0) {
-  console.log('👍');
+  console.log("짝수");
 } else {
-  console.log('👎');
+  console.log("홀수");
 }
 // ternary
-let emoji = num % 2 === 0 ? '👍' : '👎';
-console.log(emoji);
+num % 2 === 0 ? console.log("짝수") : console.log("홀수");

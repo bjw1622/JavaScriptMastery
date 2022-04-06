@@ -23,9 +23,9 @@ for (let i = 0; i < 5; i++) {
 // 반복문 제어: continue, break;
 for (let i = 0; i < 20; i++) {
   if (i === 10) {
-    continue;
-    console.log('i가 드디어 10이 되었다!');
-    break;
+    continue; // continue를 만나면 아래 코드를 무시하고 그 다음 코드로 넘어간다.
+    console.log("i가 드디어 10이 되었다!");
+    break; // 반복문을 멈춰!
   }
   console.log(i);
 }
