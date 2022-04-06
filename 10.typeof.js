@@ -14,4 +14,3 @@ console.log(typeof variable);
 
 variable = function () {};
 console.log(typeof variable);
-v
