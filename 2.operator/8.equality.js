@@ -14,13 +14,13 @@ console.log(true === 1);
 console.log(false == 0);
 console.log(false === 0);
 console.clear();
-
+console.log("----------");
 const obj1 = {
   name: "js",
-};
+}; // 메모리 0x111
 const obj2 = {
   name: "js",
-};
+}; // 메모리 0x112
 
 console.log(obj1 == obj2); //obj1과 obj2의 메모리 안의 주소가 다르기 떄문에 false
 console.log(obj1 === obj2);
@@ -30,3 +30,8 @@ console.log(obj1.name === obj2.name); // 값과 타입 모두 같으므로 true�
 let obj3 = obj2; // 동일한 메모리 주소를 갖고 있기 때문이다.
 console.log(obj3 == obj2);
 console.log(obj3 === obj2);
+
+console.log("----------");
+
+obj2.name = "jay";
+console.log(obj2.name, obj3.name);
