@@ -24,9 +24,9 @@ console.log(!!boolean);
 console.clear();
 console.log(+false); // 0
 console.log(+null); // 0
-console.log(+''); // 0
+console.log(+""); // 0
 console.log(+true); // 1
-console.log(+'text'); // NaN
+console.log(+"text"); // NaN
 console.log(+undefined); // NaN
 
 console.log(!!1); // ! 부정연산자

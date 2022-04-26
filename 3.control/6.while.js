@@ -9,13 +9,14 @@ while (num >= 0) {
 let isActive = false;
 let i = 0;
 while (isActive) {
-  console.log('아직살아있다!');
+  console.log("아직살아있다!");
   if (i === 1000) {
     break;
   }
   i++;
 }
 
+// 먼저 do 하고 while 조건을 검사한다.
 do {
-  console.log('do-while 아직살아있다!');
+  console.log("do-while 아직살아있다!");
 } while (isActive);

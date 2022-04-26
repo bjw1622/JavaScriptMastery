@@ -13,4 +13,4 @@ let octal = 0o173;
 let hex = 0x7b;
 console.log(binary, octal, hex);
 
-console.log(123 / 'text'); // NaN
+console.log(123 / "text"); // NaN
