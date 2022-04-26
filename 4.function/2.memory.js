@@ -5,3 +5,5 @@ const sum = add;
 
 console.log(sum(1, 2));
 console.log(add(1, 2));
+console.log(add === sum);
+console.log(add);
