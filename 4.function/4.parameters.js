@@ -11,6 +11,7 @@ function add(a = 1, b = 1) {
 add();
 
 // Rest 매개변수 Rest Parameters
+// 첫번째는 a 두번쨰는 b로 받고 나머지는 numbers로 받겠다.
 function sum(a, b, ...numbers) {
   console.log(a);
   console.log(b);

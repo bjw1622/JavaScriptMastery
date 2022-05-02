@@ -1,3 +1,14 @@
+// 일급객체(first-class object), 일급 함수
+// 함수가 일반 객체처럼 모든 연산이 가능한 것
+// 함수의 매개변수로 전달
+// 함수의 반환값
+// 할당 명령문
+// 동일 비교 대상
+
+// 고차함수
+// 인자로 함수를 받거나(콜백함수)
+// 함수를 반환하는 함수를 고차함수
+
 // 콜백함수
 const add = (a, b) => a + b;
 const multiply = (a, b) => a * b;
@@ -15,5 +26,5 @@ function calculator(a, b, action) {
   return result;
 }
 
-calculator(1, 1, add);
-calculator(1, 2, multiply);
+calculator(1, -1, add); //add의 참조값을 전달, call back 함수의 형태로 전달
+calculator(1, 6, multiply);
