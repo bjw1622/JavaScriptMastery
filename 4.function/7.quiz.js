@@ -3,22 +3,26 @@
 // 5, 순회하는 숫자를 다 출력하고 싶음
 // 5, 순회하는 숫자의 두배값을 다 출력하고 싶음
 // function iterate(max, action)
-function iterate(max, action) {
+function print(max) {
   for (let i = 0; i < max; i++) {
-    action(i);
+    console.log(i);
   }
 }
 
-function log(num) {
-  console.log(num);
+function doublePrint(max) {
+  for (let i = 0; i < max; i++) {
+    console.log(i * 2);
+  }
 }
 
-function doubleAndLog(num) {
-  console.log(num * 2);
+function iterate(max, action) {
+  action(max);
 }
-iterate(3, (num) => console.log(num));
-iterate(3, (num) => console.log(num * 2));
+
+iterate(5, print);
+iterate(5, doublePrint);
 
 setTimeout(() => {
-  console.log('3초뒤 이 함수가 실행될거예요');
-}, 3000);
+  console.log('1초뒤 이 함수가 실행');
+}, 1000);
+// 1초 뒤에 내 callback 함수를 실행해줘
