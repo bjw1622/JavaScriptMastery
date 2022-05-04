@@ -11,13 +11,14 @@ display(value);
 console.log(value);
 
 function displayObj(obj) {
-  obj.name = 'Bob'; // ❌❌❌❌❌❌ 외부로 부터 주어진 인자(오브젝트)를 내부에서 변경 ❌
+  obj.name = "Bob"; // ❌❌❌❌❌❌ 외부로 부터 주어진 인자(오브젝트)를 내부에서 변경 ❌
   console.log(obj);
 }
-const ellie = { name: 'Ellie' };
+const ellie = { name: "Ellie" };
 displayObj(ellie);
 console.log(ellie);
 
-function changeName(obj) { // 이름부터 변경하는 느낌을 주도록!
-  return { ...obj, name: 'Bob' }; // 반환할때는 새로운 오브젝트 만들기!
+function changeName(obj) {
+  // 이름부터 변경하는 느낌을 주도록!
+  return { ...obj, name: "Bob" }; // 반환할때는 새로운 오브젝트 만들기!
 }
