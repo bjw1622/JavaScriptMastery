@@ -17,5 +17,8 @@ console.log(add(1, 2));
 // IIFE (Immediately-Invoked Function Expressions)
 // 즉각적으로 함수를 표현할 때 쓰이는 표현식
 (function run() {
-  console.log('😍');
+  console.log("😍");
+})();
+(function test() {
+  console.log("test");
 })();
