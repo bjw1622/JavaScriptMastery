@@ -10,9 +10,11 @@ class Fruit {
   // 클래스 레벨의 메서드
   static makeRandomFruit() {
     // 클래스 레벨의 메서드에서는 this를 참조할 수 없음
+    // 클래스 자체는 값이 채워지지 않은 상태이기 떄문
     return new Fruit('banana', '🍌');
   }
 
+  // 만들어진 인스턴스와 밀접하게 연관
   // 인스턴스 레벨의 메서드
   display = () => {
     console.log(`${this.name}: ${this.emoji}`);
@@ -20,8 +22,8 @@ class Fruit {
 }
 
 const banana = Fruit.makeRandomFruit();
-console.log(banana);
-console.log(Fruit.MAX_FRUITS);
+// console.log(banana);
+// console.log(Fruit.MAX_FRUITS);
 // apple은 Fruit 클래스의 인스턴스이다.
 const apple = new Fruit('apple', '🍎');
 // orange은 Fruit 클래스의 인스턴스이다.
