@@ -24,8 +24,8 @@ function Fruit(name, emoji) {
   // return this; // 생략가능, 자동으로 this를 return
 }
 
-const apple = new Fruit("apple", "🍎");
-const orange = new Fruit("orange", "🍊");
+const apple = new Fruit('apple', '🍎');
+const orange = new Fruit('orange', '🍊');
 
 console.log(apple);
 console.log(orange);
