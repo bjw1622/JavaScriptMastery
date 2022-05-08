@@ -1,5 +1,5 @@
 const obj = {
-  name: "엘리",
+  name: '엘리',
   age: 20,
 };
 // 코딩하는 시점에, 정적으로 접근이 확정됨, 이미 값이 존재하기 때문에 이상 X
@@ -10,13 +10,13 @@ obj.age;
 function getValue(obj, key) {
   return obj[key];
 }
-console.log(getValue(obj, "name"));
+console.log(getValue(obj, 'name'));
 
 // 새로운 값을 할당
 function addKey(obj, key, value) {
   obj[key] = value;
 }
-addKey(obj, "job", "engineer");
+addKey(obj, 'job', 'engineer');
 console.log(obj);
 
 // key 삭제
