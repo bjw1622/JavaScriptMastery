@@ -8,6 +8,9 @@ class Fruit {
   }
 
   // 클래스 레벨의 메서드
+  // static이 포함된 프로퍼티와 메소드는 인스턴스에 포함 X
+  // 클래스에 그대로 남아있음.
+  // 클래스 레벨에서 공통적으로 사용하기 위해서
   static makeRandomFruit() {
     // 클래스 레벨의 메서드에서는 this를 참조할 수 없음
     // 클래스 자체는 값이 채워지지 않은 상태이기 떄문
@@ -35,5 +38,6 @@ console.log(apple.name);
 console.log(apple.emoji);
 apple.display();
 
+// static을 사용하면 object를 굳이 만들지 않고도 사용이 가능.
 Math.pow();
 Number.isFinite(1);

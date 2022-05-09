@@ -10,9 +10,9 @@ class Fruit {
     this.emoji = emoji;
   }
 
-  display = () => {
+  display() {
     console.log(`${this.name}: ${this.emoji}`);
-  };
+  }
 }
 
 // apple은 Fruit 클래스의 인스턴스이다.

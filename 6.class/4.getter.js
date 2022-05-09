@@ -16,5 +16,5 @@ class Student {
 const student = new Student('수지', '김');
 student.firstName = '안나';
 console.log(student.firstName);
-console.log(student.fullName);
-student.fullName = '김철수';
+console.log(student.fullName); // .fullName은 get이 호출
+student.fullName = '김철수'; // 무엇인가를 할당한다면 set이 호출

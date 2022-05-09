@@ -10,16 +10,14 @@ class Counter {
       this.#value = startValue;
     }
   }
-
+  increase() {
+    this.#value++;
+  }
   get value() {
     return this.#value;
   }
-
-  increment = () => {
-    this.#value++;
-  };
 }
-const counter = new Counter(0);
-counter.increment(); // 1
-counter.increment(); // 2
+
+const counter = new Counter(1);
+counter.increase();
 console.log(counter.value);

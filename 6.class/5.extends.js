@@ -54,7 +54,7 @@ class Dog extends Animal {
 
   // 오버라이딩 overriding
   eat() {
-    super.eat();
+    super.eat(); //부모의 기능을 그대로 유지
     console.log('강아지가 먹는다!');
   }
 }
