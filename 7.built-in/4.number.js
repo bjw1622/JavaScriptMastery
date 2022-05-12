@@ -25,7 +25,7 @@ const num4 = 1234.12;
 console.log(num4.toFixed());
 
 console.log(num4.toString());
-console.log(num4.toLocaleString('ar-EG'));
+console.log(num4.toLocaleString("ar-EG"));
 
 // 원하는 자릿수까지 유효하도록 반올림
 console.log(num4.toPrecision(5));
