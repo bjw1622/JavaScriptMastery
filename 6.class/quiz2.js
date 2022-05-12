@@ -5,31 +5,32 @@
 // 파트타임 직원은 시간당 8000원
 
 class Employee {
-  constructor(name, department, hoursPerMonth, payRate) {
-    this.name = name;
-    this.department = department;
-    this.hoursPerMonth = hoursPerMonth;
-    this.payRate = payRate;
+  #name;
+  #departName;
+  #monthHour;
+  constructor(name, departName, monthHour) {
+    this.#name = name;
+    this.#departName = departName;
+    this.#monthHour = monthHour;
   }
-  calculatePay() {
-    return this.hoursPerMonth * this.payRate;
-  }
-}
-
-class FullTimeEmployee extends Employee {
-  static PAY_RATE = 10000;
-  constructor(name, department, hoursPerMonth) {
-    super(name, department, hoursPerMonth, FullTimeEmployee.PAY_RATE);
-  }
-}
-class PartTimeEmployee extends Employee {
-  static PAY_RATE = 8000;
-  constructor(name, department, hoursPerMonth) {
-    super(name, department, hoursPerMonth, PartTimeEmployee.PAY_RATE);
+  cal() {
+    console.log(`${this.#monthHour * 10000}원`);
   }
 }
 
-const ellie = new FullTimeEmployee('엘리', 's/w', 30);
-const bob = new PartTimeEmployee('밥', 's/w', 20);
-console.log(ellie.calculatePay());
-console.log(bob.calculatePay());
+class FullEmployee extends Employee {}
+class PartEmployee extends Employee {
+  #name;
+  #departName;
+  #monthHour;
+  constructor(name, departName, monthHour) {
+    super(name, departName, monthHour);
+    this.#monthHour = monthHour;
+  }
+  cal() {
+    super.cal();
+    console.log(`${this.#monthHour * 8000}원`);
+  }
+}
+const part = new PartEmployee("백재원", "FE", 123);
+part.cal();
