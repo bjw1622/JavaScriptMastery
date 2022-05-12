@@ -5,32 +5,63 @@
 // 파트타임 직원은 시간당 8000원
 
 class Employee {
-  #name;
-  #departName;
-  #monthHour;
-  constructor(name, departName, monthHour) {
-    this.#name = name;
-    this.#departName = departName;
-    this.#monthHour = monthHour;
+  constructor(name, department, hoursPerMonth, payRate) {
+    this.name = name;
+    this.department = department;
+    this.hoursPerMonth = hoursPerMonth;
+    this.payRate = payRate;
   }
-  cal() {
-    console.log(`${this.#monthHour * 10000}원`);
+  calculatePay() {
+    return this.hoursPerMonth * this.payRate;
   }
 }
 
-class FullEmployee extends Employee {}
-class PartEmployee extends Employee {
-  #name;
-  #departName;
-  #monthHour;
-  constructor(name, departName, monthHour) {
-    super(name, departName, monthHour);
-    this.#monthHour = monthHour;
-  }
-  cal() {
-    super.cal();
-    console.log(`${this.#monthHour * 8000}원`);
+class FullTimeEmployee extends Employee {
+  static #PAY_RATE = 10000;
+  constructor(name, department, hoursPerMonth) {
+    super(name, department, hoursPerMonth, FullTimeEmployee.#PAY_RATE);
   }
 }
-const part = new PartEmployee("백재원", "FE", 123);
-part.cal();
+
+class PartTimeEmployee extends Employee {
+  static #PAY_RATE = 8000;
+  constructor(name, department, hoursPerMonth) {
+    super(name, department, hoursPerMonth, PartTimeEmployee.#PAY_RATE);
+  }
+}
+
+const jay = new FullTimeEmployee("Jay", "FE", 30);
+console.log(jay.calculatePay());
+const loi = new PartTimeEmployee("loi", "FE", 30);
+console.log(loi.calculatePay());
+
+// class Employee {
+//   #name;
+//   #departName;
+//   #monthHour;
+//   constructor(name, departName, monthHour) {
+//     this.#name = name;
+//     this.#departName = departName;
+//     this.#monthHour = monthHour;
+//   }
+//   cal() {
+//     console.log(`${this.#monthHour * 10000}원`);
+//   }
+// }
+
+// class FullEmployee extends Employee {}
+// class PartEmployee extends Employee {
+//   #name;
+//   #departName;
+//   #monthHour;
+//   constructor(name, departName, monthHour) {
+//     super(name, departName, monthHour);
+//     this.#monthHour = monthHour;
+//   }
+//   cal() {
+//     super.cal();
+//     console.log(`${this.#monthHour * 8000}원`);
+//   }
+// }
+// const part = new PartEmployee("백재원", "FE", 123);
+// part.cal();
