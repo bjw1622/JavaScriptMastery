@@ -19,5 +19,6 @@ class Counter {
 }
 
 const counter = new Counter(1);
+console.log(counter);
 counter.increase();
 console.log(counter.value);
