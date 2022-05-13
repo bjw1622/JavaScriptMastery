@@ -1,3 +1,11 @@
+/**
+ * 자바스크립트는 자바스크립트 런타임에서 동작(Browser or Node)
+ * 자바스크립트 안에는 유용한 빌트인 객체(내장 객체)들이 존재
+ * 하지만 자바스크립트 만으로는 브라우저 화면, 네트워크 전송 등이 불가능
+ * 이런 것들을 위해서는 런타임 환경에서 제공해주는 호스트 객체를 사용
+ * 호스트 객체 : browser의 경우 browser apis, node의 경우 node apis
+ */
+
 // 6가지의 원시 타입
 // string, number, boolean, null, undefined, symbol
 // 래퍼 객체
