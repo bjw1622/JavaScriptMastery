@@ -15,6 +15,6 @@ setInterval(() => {
     const hours = now.getHours();
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
-    $date.innerHTML = `${btDay}d`;
-    $date.innerHTML += ` ${24 - hours}h ${60 - minutes}m ${ 60-seconds}s`
+    $date.innerHTML = `${btDay-2}d`;
+    $date.innerHTML += ` ${24 - hours-1}h ${60 - minutes-1}m ${ 60-seconds}s`
 }, 1000);
